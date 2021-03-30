@@ -16,7 +16,8 @@ try {
     echo '書籍名' . str2html($row[0]) . '<br>';
     echo '著者名' . str2html($row[1]) . '<br><br>';
   }
+  echo "<a href='../5-3/add.html'>書籍を追加する</a>";
 } catch (PDOException $e) {
-  echo "エラー発生！：" . $e->getMessage() . "<br>";
+  echo "エラー発生！：" . str2html($e->getMessage()) . "<br>";
   exit;
 }
